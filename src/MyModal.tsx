@@ -7,7 +7,7 @@ export function MyModal(props: iMyModalProps) {
 
   return (
     <div className="fixed left-0 top-0 w-screen px-8 h-screen flex bg-slate-400/40">
-      <div className="bg-white rounded-md h-4/5 m-auto p-5">
+      <div className="bg-white shadow-2xl rounded-md h-4/5 m-auto max-w-lg py-2 px-3 overflow-auto">
         <div className="flex justify-between">
           <div>
             <h2 className="font-bold text-xl">
@@ -26,8 +26,9 @@ export function MyModal(props: iMyModalProps) {
             X
           </button>
         </div>
-        <h4 className="font-bold underline">Crash Info</h4>
-        <ul className="list-disc">
+        <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-gray-700" />
+        <h4 className="font-bold underline mt-1">Crash Info</h4>
+        <ul className="list-disc list-inside">
           <li>Crash Type: {props.crash.crash_type}</li>
           <li>Initial Crash Type: {props.crash.first_crash_type}</li>
           <li>Primary Cause: {props.crash.prim_contributory_cause}</li>
@@ -38,16 +39,16 @@ export function MyModal(props: iMyModalProps) {
           <li>Ejection: {props.crash.ejection}</li>
           <li>Damage: {props.crash.damage}</li>
         </ul>
-        <h4 className="font-bold underline">Location Information</h4>
-        <ul className="list-disc">
+        <h4 className="font-bold underline mt-1">Location Information</h4>
+        <ul className="list-disc list-inside">
           <li>Trafficway Type: {props.crash.trafficway_type}</li>
           <li>Traffic Signal: {props.crash.traffic_control_device}</li>
           <li>Traffic Signal Condition: {props.crash.device_condition}</li>
           <li>Street alignment: {props.crash.alignment}</li>
           <li>Road Defect: {props.crash.road_defect}</li>
         </ul>
-        <h4 className="font-bold underline">Injuries & Fatalities</h4>
-        <ul className="list-disc">
+        <h4 className="font-bold underline mt-1">Injuries & Fatalities</h4>
+        <ul className="list-disc list-inside">
           <li>Fatalities: {props.crash.injuries_fatal}</li>
           <li>Injuries Reported, Not Evident: {props.crash.injuries_no_indication}</li>
           <li>Injuries, Non-Incapacitating: {props.crash.injuries_non_incapacitating}</li>
@@ -56,16 +57,16 @@ export function MyModal(props: iMyModalProps) {
           <li>Total Injuries: {props.crash.injuries_total}</li>
           <li>Most Severe Injuries: {props.crash.most_severe_injury}</li>
         </ul>
-        <h4 className="font-bold underline">Conditions</h4>
-        <ul className="list-disc">
+        <h4 className="font-bold underline mt-1">Conditions</h4>
+        <ul className="list-disc list-inside">
           <li>Lighting Condition: {props.crash.lighting_condition}</li>
           <li>Driver Vision: {props.crash.driver_vision}</li>
           <li>Cyclist Vision: {props.crash.pedpedal_visibility}</li>
           <li>Weather Condition: {props.crash.weather_condition}</li>
           <li>Roadway Surface Condition: {props.crash.roadway_surface_cond}</li>
         </ul>
-        <h4 className="font-bold underline">Miscellaneous</h4>
-        <ul className="list-disc">
+        <h4 className="font-bold underline mt-1">Miscellaneous</h4>
+        <ul className="list-disc list-inside">
           <li>Safety Equipment Used: {props.crash.safety_equipment}</li>
           <li>Physical Condition: {props.crash.physical_condition}</li>
         </ul>
