@@ -1,5 +1,3 @@
-type VF = () => void;
-
 export interface ICrash {
   traffic_control_device: string;
   device_condition: string;
