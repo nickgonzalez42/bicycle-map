@@ -14,8 +14,9 @@ function App() {
   const [currentCrash, setCurrentCrash] = useState<ICrash | null>(null);
 
   const getCrashes = () => {
+    const base = import.meta.env.VITE_BASE_REQUEST;
     axios
-      .get("http://localhost:8000/")
+      .get(base)
       .then((response) => {
         setCrashes(response.data);
         setMarkersLoaded(true);
@@ -49,7 +50,7 @@ function App() {
       <div className="w-screen h-screen">
         <GoogleMap
           center={chicagoCoord}
-          zoom={15}
+          zoom={12}
           mapContainerStyle={{ width: "100%", height: "100%" }}
           options={{ zoomControl: false, streetViewControl: false, mapTypeControl: false, fullscreenControl: false }}
         >
