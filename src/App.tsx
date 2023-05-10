@@ -46,27 +46,36 @@ function App() {
   }
 
   return (
-    <div className="w-screen h-screen">
+    <div className="absolute inset-0">
       <div className="w-screen h-screen">
-        <GoogleMap
-          center={chicagoCoord}
-          zoom={12}
-          mapContainerStyle={{ width: "100%", height: "100%" }}
-          options={{ zoomControl: false, streetViewControl: false, mapTypeControl: false, fullscreenControl: false }}
-        >
-          {crashes?.map((crash) => {
-            return (
-              <MarkerF
-                key={crash.crash_record_id}
-                position={{ lat: parseFloat(crash.latitude), lng: parseFloat(crash.longitude) }}
-                onClick={() => handleClick(crash)}
-              ></MarkerF>
-            );
-          })}
-          <MarkerF position={chicagoCoord} />
-        </GoogleMap>
+        <div className="w-screen h-screen">
+          <GoogleMap
+            center={chicagoCoord}
+            zoom={12}
+            mapContainerStyle={{ width: "100%", height: "100%" }}
+            options={{ zoomControl: false, streetViewControl: false, mapTypeControl: false, fullscreenControl: false }}
+          >
+            {crashes?.map((crash) => {
+              return (
+                <MarkerF
+                  key={crash.crash_record_id}
+                  position={{ lat: parseFloat(crash.latitude), lng: parseFloat(crash.longitude) }}
+                  onClick={() => handleClick(crash)}
+                ></MarkerF>
+              );
+            })}
+            <MarkerF position={chicagoCoord} />
+          </GoogleMap>
+        </div>
+        <button className="bg-white border-white">
+          <svg className="absolute top-3 left-3" viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="20"></rect>
+            <rect y="30" width="100" height="20"></rect>
+            <rect y="60" width="100" height="20"></rect>
+          </svg>
+        </button>
+        {currentCrash ? <MyModal onClose={handleClose} crash={currentCrash} /> : <></>}
       </div>
-      {currentCrash ? <MyModal onClose={handleClose} crash={currentCrash} /> : <></>}
     </div>
   );
 }

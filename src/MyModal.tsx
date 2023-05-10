@@ -6,8 +6,12 @@ export function MyModal(props: iMyModalProps) {
   }
 
   return (
-    <div className="fixed left-0 top-0 w-screen px-8 h-screen flex bg-slate-400/40">
-      <div className="bg-white shadow-2xl rounded-md h-4/5 m-auto max-w-lg py-2 px-3 overflow-auto">
+    <div onClick={onClose} className="fixed left-0 top-0 w-screen px-8 h-screen flex bg-slate-400/40">
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="bg-white shadow-2xl rounded-xl h-4/5 m-auto max-w-lg py-2 px-3 overflow-auto"
+      >
+        {/* TODO Fix header to the top */}
         <div className="flex justify-between">
           <div>
             <h2 className="font-bold text-xl">
@@ -26,6 +30,7 @@ export function MyModal(props: iMyModalProps) {
             X
           </button>
         </div>
+        {/* TODO Add street address photo? Google Maps Place Photos */}
         <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-gray-700" />
         <h4 className="font-bold underline mt-1">Crash Info</h4>
         <ul className="list-disc list-inside">
