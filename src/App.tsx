@@ -47,7 +47,13 @@ function App() {
   useEffect(getCrashes, []);
 
   if (!isLoaded || !markersLoaded) {
-    return <Loading />;
+    return (
+      <div className="absolute inset-0">
+        <div className="w-full h-full">
+          <Loading />
+        </div>
+      </div>
+    );
   }
 
   return (
