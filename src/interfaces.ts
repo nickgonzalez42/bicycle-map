@@ -39,7 +39,10 @@ export interface ICrash {
   bac_result: string;
 }
 
-export interface iMyModalProps {
-  crash: ICrash;
+export interface iWelcomeModalProps {
   onClose(arg: void): void;
+}
+
+export interface iMyModalProps extends iWelcomeModalProps {
+  crash: ICrash;
 }

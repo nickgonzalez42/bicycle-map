@@ -6,6 +6,7 @@ import { ICrash } from "./interfaces";
 import { MyModal } from "./MyModal";
 import { Loading } from "./Loading";
 import { SideBar } from "./SideBar";
+import { WelcomeModal } from "./WelcomeModal";
 
 const chicagoCoord = { lat: 41.8781, lng: -87.6298 };
 
@@ -14,6 +15,7 @@ function App() {
   const [markersLoaded, setMarkersLoaded] = useState(false);
   const [currentCrash, setCurrentCrash] = useState<ICrash | null>(null);
   const [showSideBar, setShowSideBar] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(true);
 
   const getCrashes = () => {
     const base = import.meta.env.VITE_BASE_REQUEST;
@@ -38,6 +40,10 @@ function App() {
 
   const handleClose = (): void => {
     setCurrentCrash(null);
+  };
+
+  const handleWelcomeClose = (): void => {
+    setShowWelcome(false);
   };
 
   const { isLoaded } = useJsApiLoader({
@@ -88,6 +94,7 @@ function App() {
           </svg>
         </button>
         {currentCrash ? <MyModal onClose={handleClose} crash={currentCrash} /> : <></>}
+        {showWelcome ? <WelcomeModal onClose={handleWelcomeClose} /> : <></>}
       </div>
     </div>
   );
