@@ -1,5 +1,6 @@
 export function Loading() {
   return (
+    // TODO Add Bicycle spinning loading animation and center it
     <div role="status">
       <svg
         className="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"

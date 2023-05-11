@@ -5,6 +5,7 @@ import axios from "axios";
 import { ICrash } from "./interfaces";
 import { MyModal } from "./MyModal";
 import { Loading } from "./Loading";
+import { SideBar } from "./SideBar";
 
 const chicagoCoord = { lat: 41.8781, lng: -87.6298 };
 
@@ -12,6 +13,7 @@ function App() {
   const [crashes, setCrashes] = useState<ICrash[]>([]);
   const [markersLoaded, setMarkersLoaded] = useState(false);
   const [currentCrash, setCurrentCrash] = useState<ICrash | null>(null);
+  const [showSideBar, setShowSideBar] = useState(false);
 
   const getCrashes = () => {
     const base = import.meta.env.VITE_BASE_REQUEST;
@@ -26,8 +28,11 @@ function App() {
       });
   };
 
+  const handleBurgerClick = () => {
+    setShowSideBar(!showSideBar);
+  };
+
   const handleClick = (crash: ICrash) => {
-    console.log(crash);
     setCurrentCrash(crash);
   };
 
@@ -47,8 +52,8 @@ function App() {
 
   return (
     <div className="absolute inset-0">
-      <div className="w-screen h-screen">
-        <div className="w-screen h-screen">
+      <div className="w-full h-full">
+        <div className="w-full h-full">
           <GoogleMap
             center={chicagoCoord}
             zoom={12}
@@ -67,8 +72,10 @@ function App() {
             <MarkerF position={chicagoCoord} />
           </GoogleMap>
         </div>
-        <button className="bg-white border-white">
-          <svg className="absolute top-3 left-3" viewBox="0 0 100 80" width="40" height="40">
+        {showSideBar === true ? <SideBar /> : <></>}
+        {/* TODO Animate burger button? */}
+        <button className="bg-white border-white" onClick={handleBurgerClick}>
+          <svg className="absolute top-5 left-5" viewBox="0 0 100 80" width="40" height="40">
             <rect width="100" height="20"></rect>
             <rect y="30" width="100" height="20"></rect>
             <rect y="60" width="100" height="20"></rect>

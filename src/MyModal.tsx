@@ -9,29 +9,34 @@ export function MyModal(props: iMyModalProps) {
     <div onClick={onClose} className="fixed left-0 top-0 w-screen px-8 h-screen flex bg-slate-400/40">
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-white shadow-2xl rounded-xl h-4/5 m-auto max-w-lg py-2 px-3 overflow-auto"
+        className="bg-white shadow-2xl rounded-xl h-3/5 m-auto max-w-lg pb-2 px-3 overflow-auto"
       >
         {/* TODO Fix header to the top */}
-        <div className="flex justify-between">
-          <div>
-            <h2 className="font-bold text-xl">
-              {props.crash.street_no} {props.crash.street_direction} {props.crash.street_name}
-            </h2>
-            {/* TODO Add the time */}
-            <p className="text-gray-500">
-              {props.crash.crash_date.substring(5, 7)}/{props.crash.crash_date.substring(8, 10)}/
-              {props.crash.crash_date.substring(0, 4)}
-            </p>
+
+        <div className="top-0 justify-between sticky bg-white">
+          <div className="bg-white h-3"></div>
+
+          <div className="flex justify-between">
+            <div>
+              <h2 className="font-bold text-xl">
+                {props.crash.street_no} {props.crash.street_direction} {props.crash.street_name}
+              </h2>
+              {/* TODO Add the time */}
+              <p className="text-gray-500">
+                {props.crash.crash_date.substring(5, 7)}/{props.crash.crash_date.substring(8, 10)}/
+                {props.crash.crash_date.substring(0, 4)}
+              </p>
+            </div>
+            <button
+              className="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-m px-4 py-1 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 right-0"
+              onClick={onClose}
+            >
+              X
+            </button>
           </div>
-          <button
-            className="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-m px-4 py-1 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 right-0"
-            onClick={onClose}
-          >
-            X
-          </button>
+          <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-gray-700 w-full" />
         </div>
         {/* TODO Add street address photo? Google Maps Place Photos */}
-        <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-gray-700" />
         <h4 className="font-bold underline mt-1">Crash Info</h4>
         <ul className="list-disc list-inside">
           <li>Crash Type: {props.crash.crash_type}</li>
