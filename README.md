@@ -251,7 +251,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-url]: https://github.com/nickgonzalez42/bicycle-map/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: [https://linkedin.com/in/othneildrew](https://www.linkedin.com/in/nicholasjgonzalez/)
-[product-screenshot]: <img width="477" alt="CHIBIKE" src="https://github.com/nickgonzalez42/bicycle-map/assets/41881164/2b6fe9b5-d2b1-46f9-a05b-12f6dbb73a65">
+[product-screenshot]: [https://github.com/nickgonzalez42/bicycle-map/assets/41881164/2b6fe9b5-d2b1-46f9-a05b-12f6dbb73a65]
 
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
