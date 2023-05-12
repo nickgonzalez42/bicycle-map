@@ -83,9 +83,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 <div align="center">
-  <img src="https://github.com/nickgonzalez42/bicycle-map/assets/41881164/2b6fe9b5-d2b1-46f9-a05b-12f6dbb73a65" width="50%">
+  <img src="https://github.com/nickgonzalez42/bicycle-map/assets/41881164/2b6fe9b5-d2b1-46f9-a05b-12f6dbb73a65" width="25%">
 </div>
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
