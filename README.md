@@ -98,13 +98,6 @@ But we are not just about tracking accidents; we are also committed to advocatin
 
 
 
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-
 <!-- ROADMAP -->
 ## Roadmap
 
