@@ -30,23 +30,24 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+<!--  TODO Add Logo  -->
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">CHI Bike Tracker</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    React frontend created with Typescript that maps recent bicycle crashes across Google Maps API.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/nickgonzalez42/bicycle-map"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/nickgonzalez42/bicycle-map">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/nickgonzalez42/bicycle-map/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/nickgonzalez42/bicycle-map/issues">Request Feature</a>
   </p>
 </div>
 
@@ -87,16 +88,11 @@
   <img src="https://github.com/nickgonzalez42/bicycle-map/assets/41881164/2b6fe9b5-d2b1-46f9-a05b-12f6dbb73a65" width="25%">
 </div>
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Welcome to our Chicago-based bicycle crash tracker project! We are a platform dedicated to promoting bicycle safety and advocating for the development of intermodal infrastructure in the city of Chicago. Bicycling is an increasingly popular mode of transportation in urban areas, and as more people take to two wheels, it is crucial that we prioritize their safety. 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+Unfortunately, accidents involving bicycles can and do happen, and when they do, it is essential to track them in order to understand the causes and develop effective solutions. Our website aspires to serve as a central hub for information about bicycle crashes in Chicago. By compiling data from a variety of sources, including police reports, news articles, and community input, we aim to provide the most comprehensive and accurate picture of the state of bicycle safety in the city. 
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+But we are not just about tracking accidents; we are also committed to advocating for changes that will make Chicago a safer and more bike-friendly city. This includes promoting the development of intermodal infrastructure to benefit pedestrians and cyclists, such as bike lanes, protected intersections, and multi-use paths, as well as educating the public about the importance of safe cycling practices. We believe that by working together, we can make Chicago a safer and more enjoyable place to ride a bicycle. Whether you are a seasoned cyclist or just getting started, we invite you to join us in our mission to promote bicycle safety and advocate for intermodal infrastructure.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,14 +102,16 @@ Use the `BLANK_README.md` to get started.
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
+* [![Typescript][Typescript.com]][Typescript-url]
+* 
 * [![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
 * [![Svelte][Svelte.dev]][Svelte-url]
 * [![Laravel][Laravel.com]][Laravel-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
+* 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -169,13 +167,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
+- [ ] Add Filters and Sorting
+- [ ] Add Analytics Page
+- [ ] Add User Submission
 - [ ] Multi-language Support
-    - [ ] Chinese
     - [ ] Spanish
+    - [ ] Polish
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
@@ -254,7 +251,6 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/nicholasjgonzalez/
 [product-screenshot]: https://github.com/nickgonzalez42/bicycle-map/assets/41881164/2b6fe9b5-d2b1-46f9-a05b-12f6dbb73a65
-
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
@@ -271,3 +267,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[Typescript.com]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+[Typescript-url]: https://www.typescriptlang.org
