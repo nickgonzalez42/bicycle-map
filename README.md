@@ -90,8 +90,6 @@ But we are not just about tracking accidents; we are also committed to advocatin
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
 * [![React][React.js]][React-url]
 * [![Typescript][Typescript.com]][Typescript-url]
 * [![Tailwind][Tailwind.com]][Tailwind-url]
