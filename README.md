@@ -43,8 +43,6 @@
     <a href="https://bicycle-map.vercel.app"><strong>Visit the site »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/nickgonzalez42/bicycle-map">View Demo</a>
-    ·
     <a href="https://github.com/nickgonzalez42/bicycle-map/issues">Report Bug</a>
     ·
     <a href="https://github.com/nickgonzalez42/bicycle-map/issues">Request Feature</a>
