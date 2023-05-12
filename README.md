@@ -40,7 +40,7 @@
   <p align="center">
     React frontend created with Typescript that maps recent bicycle crashes across Google Maps API.
     <br />
-    <a href="https://github.com/nickgonzalez42/bicycle-map"><strong>Explore the docs »</strong></a>
+    <a href="https://bicycle-map.vercel.app"><strong>Visit the site »</strong></a>
     <br />
     <br />
     <a href="https://github.com/nickgonzalez42/bicycle-map">View Demo</a>
