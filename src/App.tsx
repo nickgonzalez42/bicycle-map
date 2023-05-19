@@ -23,7 +23,9 @@ function App() {
     console.log(base);
     if (showFatalities) {
       base += "fatalities";
+      console.log("Adding to url");
     }
+    console.log(base);
     axios
       .get(base)
       .then((response) => {
