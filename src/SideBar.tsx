@@ -14,6 +14,11 @@ export function SideBar(props: iSideBarProps) {
       </div>
       <div className="pt-20 px-4">
         <div className="block">
+          <div>
+            <h3 className="font-bold text-xl underline">Filters</h3>
+            <Filters filter={props.filter} />
+            <br />
+          </div>
           <h3 className="font-bold text-xl underline">About</h3>
           <p>
             Welcome to our Chicago-based bicycle crash tracker website! We are a platform dedicated to promoting bicycle
@@ -35,11 +40,6 @@ export function SideBar(props: iSideBarProps) {
             <br />
             <br />
           </p>
-        </div>
-        <div>
-          <h3 className="font-bold text-xl underline">Filters</h3>
-          <Filters filter={props.filter} />
-          <br />
         </div>
         <div>
           <h3 className="font-bold text-xl underline">Analytics</h3>
