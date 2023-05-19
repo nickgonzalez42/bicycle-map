@@ -1,9 +1,14 @@
-export function SideBar() {
+import { iSideBarProps } from "./interfaces";
+import Filters from "./Filters";
+
+export function SideBar(props: iSideBarProps) {
   // TODO Fix width
   // TODO Make Accordion?
   return (
     <div className="absolute top-0 left-0 h-full p-0 w-96 bg-white overflow-auto flex">
-      <div className="h-20 fixed w-96 bg-sky-100" />
+      <div className="h-20 fixed w-96 bg-zinc-500 flex justify-end">
+        <img className="h-16 right-4 my-auto mr-2" src="../public/logo2.png" />
+      </div>
       <div className="pt-20 px-4">
         <div className="block">
           <h3 className="font-bold text-xl underline">About</h3>
@@ -30,20 +35,8 @@ export function SideBar() {
         </div>
         <div>
           <h3 className="font-bold text-xl underline">Filters</h3>
+          <Filters filter={props.filter} />
           <p>Coming soon...</p>
-
-          {/* <p>&#42;Results limited to the 100 most recent accidents</p>
-          <form>
-            <input list="browsers" name="browser" />
-            <datalist id="browsers">
-              <option value="Internet Explorer" />
-              <option value="Firefox" />
-              <option value="Chrome" />
-              <option value="Opera" />
-              <option value="Safari" />
-            </datalist>
-            <input type="submit" />
-          </form> */}
           <br />
         </div>
         <div>

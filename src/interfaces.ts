@@ -46,3 +46,7 @@ export interface iWelcomeModalProps {
 export interface iMyModalProps extends iWelcomeModalProps {
   crash: ICrash;
 }
+
+export interface iSideBarProps {
+  filter(arg: string): void;
+}

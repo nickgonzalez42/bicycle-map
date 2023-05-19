@@ -16,9 +16,13 @@ function App() {
   const [currentCrash, setCurrentCrash] = useState<ICrash | null>(null);
   const [showSideBar, setShowSideBar] = useState(false);
   const [showWelcome, setShowWelcome] = useState(true);
+  const [showFatalities, setShowFatalities] = useState(false);
 
   const getCrashes = () => {
-    const base = import.meta.env.VITE_BASE_REQUEST;
+    let base = import.meta.env.VITE_BASE_REQUEST;
+    if (showFatalities) {
+      base += "fatalities";
+    }
     axios
       .get(base)
       .then((response) => {
@@ -30,8 +34,16 @@ function App() {
       });
   };
 
-  const handleBurgerClick = () => {
-    setShowSideBar(!showSideBar);
+  const updateFilters = (type: string) => {
+    console.log("WORKING");
+    console.log(type);
+    console.log(showFatalities);
+    // TODO change state to be a string with more options
+    if (type == "Fatalities") {
+      setShowFatalities(true);
+    } else {
+      setShowFatalities(false);
+    }
   };
 
   const handleClick = (crash: ICrash) => {
@@ -42,15 +54,11 @@ function App() {
     setCurrentCrash(null);
   };
 
-  const handleWelcomeClose = (): void => {
-    setShowWelcome(false);
-  };
-
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
   });
 
-  useEffect(getCrashes, []);
+  useEffect(getCrashes, [showFatalities]);
 
   if (!isLoaded || !markersLoaded) {
     return (
@@ -84,9 +92,14 @@ function App() {
             <MarkerF position={chicagoCoord} />
           </GoogleMap>
         </div>
-        {showSideBar === true ? <SideBar /> : <></>}
+        {showSideBar === true ? <SideBar filter={updateFilters} /> : <></>}
         {/* TODO Animate burger button? */}
-        <button className="bg-white border-white" onClick={handleBurgerClick}>
+        <button
+          className="bg-white border-white"
+          onClick={() => {
+            setShowSideBar(!showSideBar);
+          }}
+        >
           <svg className="absolute top-5 left-5" viewBox="0 0 100 80" width="40" height="40">
             <rect width="100" height="20"></rect>
             <rect y="30" width="100" height="20"></rect>
@@ -94,7 +107,15 @@ function App() {
           </svg>
         </button>
         {currentCrash ? <MyModal onClose={handleClose} crash={currentCrash} /> : <></>}
-        {showWelcome ? <WelcomeModal onClose={handleWelcomeClose} /> : <></>}
+        {showWelcome ? (
+          <WelcomeModal
+            onClose={(): void => {
+              setShowWelcome(false);
+            }}
+          />
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
