@@ -1,13 +1,16 @@
 import { iSideBarProps } from "./interfaces";
 import Filters from "./Filters";
 
+import logo2 from "/public/static/logo2.png";
+
 export function SideBar(props: iSideBarProps) {
+  console.log(logo2);
   // TODO Fix width
   // TODO Make Accordion?
   return (
     <div className="absolute top-0 left-0 h-full p-0 w-96 bg-white overflow-auto flex">
       <div className="h-20 fixed w-96 bg-zinc-500 flex justify-end">
-        <img className="h-16 right-4 my-auto mr-2" src="/public/static/logo2.png" />
+        <img className="h-16 right-4 my-auto mr-2" src={logo2} />
       </div>
       <div className="pt-20 px-4">
         <div className="block">
