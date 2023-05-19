@@ -22,7 +22,7 @@ function App() {
     let base = import.meta.env.VITE_BASE_REQUEST;
     console.log(base);
     if (showFatalities) {
-      base += "fatalities";
+      base += "/fatalities";
       console.log("Adding to url");
     }
     console.log(base);
