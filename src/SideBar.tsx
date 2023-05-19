@@ -7,7 +7,7 @@ export function SideBar(props: iSideBarProps) {
   return (
     <div className="absolute top-0 left-0 h-full p-0 w-96 bg-white overflow-auto flex">
       <div className="h-20 fixed w-96 bg-zinc-500 flex justify-end">
-        <img className="h-16 right-4 my-auto mr-2" src="../public/logo2.png" />
+        <img className="h-16 right-4 my-auto mr-2" src="/public/static/logo2.png" />
       </div>
       <div className="pt-20 px-4">
         <div className="block">
@@ -36,7 +36,6 @@ export function SideBar(props: iSideBarProps) {
         <div>
           <h3 className="font-bold text-xl underline">Filters</h3>
           <Filters filter={props.filter} />
-          <p>Coming soon...</p>
           <br />
         </div>
         <div>

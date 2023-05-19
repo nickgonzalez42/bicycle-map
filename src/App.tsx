@@ -20,6 +20,7 @@ function App() {
 
   const getCrashes = () => {
     let base = import.meta.env.VITE_BASE_REQUEST;
+    console.log(base);
     if (showFatalities) {
       base += "fatalities";
     }
@@ -35,8 +36,6 @@ function App() {
   };
 
   const updateFilters = (type: string) => {
-    console.log("WORKING");
-    console.log(type);
     console.log(showFatalities);
     // TODO change state to be a string with more options
     if (type == "Fatalities") {
