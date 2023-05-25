@@ -16,15 +16,12 @@ function App() {
   const [currentCrash, setCurrentCrash] = useState<ICrash | null>(null);
   const [showSideBar, setShowSideBar] = useState(false);
   const [showWelcome, setShowWelcome] = useState(true);
-  const [showFatalities, setShowFatalities] = useState(false);
+  const [crashType, setcrashType] = useState("ALL");
 
   const getCrashes = () => {
     let base = import.meta.env.VITE_BASE_REQUEST;
     console.log(base);
-    if (showFatalities) {
-      base += "/fatalities";
-      console.log("Adding to url");
-    }
+    base += "/" + crashType;
     console.log(base);
     axios
       .get(base)
@@ -37,15 +34,10 @@ function App() {
       });
   };
 
-  const updateFilters = (type: string) => {
-    console.log(showFatalities);
-    // TODO change state to be a string with more options
-    if (type == "Fatalities") {
-      setShowFatalities(true);
-    } else {
-      setShowFatalities(false);
-    }
-  };
+  // const updateFilters = (type: string) => {
+  //   // TODO change state to be a string with more options
+  //   setcrashType(type);
+  // };
 
   const handleClick = (crash: ICrash) => {
     setCurrentCrash(crash);
@@ -59,7 +51,7 @@ function App() {
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
   });
 
-  useEffect(getCrashes, [showFatalities]);
+  useEffect(getCrashes, [crashType]);
 
   if (!isLoaded || !markersLoaded) {
     return (
@@ -93,7 +85,15 @@ function App() {
             <MarkerF position={chicagoCoord} />
           </GoogleMap>
         </div>
-        {showSideBar === true ? <SideBar filter={updateFilters} /> : <></>}
+        {showSideBar === true ? (
+          <SideBar
+            filter={(type) => {
+              setcrashType(type);
+            }}
+          />
+        ) : (
+          <></>
+        )}
         {/* TODO Animate burger button? */}
         <button
           className="bg-white border-white"
