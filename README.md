@@ -31,7 +31,7 @@
 <div align="center">
 <!--  TODO Add Logo  -->
   <a href="[https://github.com/othneildrew/Best-README-Template](https://bicycle-map.vercel.app)">
-    <img src="https://github.com/nickgonzalez42/bicycle-map/assets/41881164/4e647321-60eb-4371-982d-82d9c0077c8c" alt="Logo" width="80" height="80">
+    <img src="https://github.com/nickgonzalez42/bicycle-map/assets/41881164/4e647321-60eb-4371-982d-82d9c0077c8c" alt="Logo" width="80">
   </a>
 
   <h3 align="center">CHI Bike Tracker</h3>
