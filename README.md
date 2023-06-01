@@ -102,7 +102,8 @@ But we are not just about tracking accidents; we are also committed to advocatin
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Add Filters and Sorting
+- [X] Add Filters by Injury
+- [ ] Add Sorting by Date
 - [ ] Add Analytics Page
 - [ ] Add User Submission
 - [ ] Multi-language Support
