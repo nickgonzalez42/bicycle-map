@@ -15,7 +15,7 @@ export function SideBar(props: iSideBarProps) {
       <div className="pt-20 px-4">
         <div className="block">
           <div>
-            <h3 className="font-bold text-xl underline">Filters</h3>
+            <h3 className="font-bold text-xl underline">Injury Types</h3>
             <p>*Results limited to the 100 most recent accidents</p>
             <Filters filter={props.filter} />
             <br />

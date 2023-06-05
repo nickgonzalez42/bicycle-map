@@ -31,6 +31,7 @@ class Filters extends Component<iSideBarProps> {
         <br />
         <label>Incapacitating Injury </label>
         <input type="radio" value="INCAPACITATING INJURY" name="crashType" />
+        <br />
       </div>
     );
   }

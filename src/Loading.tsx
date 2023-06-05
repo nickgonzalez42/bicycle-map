@@ -1,7 +1,7 @@
 export function Loading() {
   return (
     // TODO Add Bicycle spinning loading animation and center it
-    <div className="fixed left-0 top-0 w-screen h-screen flex">
+    <div className="fixed left-0 top-0 w-screen bg h-screen flex">
       <div onClick={(e) => e.stopPropagation()} className="m-auto">
         <svg
           className="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
