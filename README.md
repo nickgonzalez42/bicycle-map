@@ -30,8 +30,8 @@
 <br />
 <div align="center">
 <!--  TODO Add Logo  -->
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://bicycle-map.vercel.app">
+    <img src="https://github.com/nickgonzalez42/bicycle-map/assets/41881164/4e647321-60eb-4371-982d-82d9c0077c8c" alt="Logo" width="80">
   </a>
 
   <h3 align="center">CHI Bike Tracker</h3>
@@ -102,7 +102,8 @@ But we are not just about tracking accidents; we are also committed to advocatin
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Add Filters and Sorting
+- [X] Add Filters by Injury
+- [ ] Add Sorting by Date
 - [ ] Add Analytics Page
 - [ ] Add User Submission
 - [ ] Multi-language Support
